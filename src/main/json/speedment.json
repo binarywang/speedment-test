@@ -1,0 +1,550 @@
+{
+  "config" : {
+    "speedmentVersion" : "Speedment:3.1.9",
+    "nameProtected" : false,
+    "jsonp" : false,
+    "companyName" : "binarywang",
+    "packageLocation" : "src/main/java/",
+    "enabled" : true,
+    "dbmses" : [
+      {
+        "nameProtected" : true,
+        "expanded" : true,
+        "port" : 3306,
+        "schemas" : [
+          {
+            "nameProtected" : true,
+            "tables" : [
+              {
+                "nameProtected" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : true,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.Long",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "id",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "id",
+                    "hashIndex" : false
+                  },
+                  {
+                    "databaseType" : "java.lang.Long",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "user_id",
+                    "id" : "user_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "product_name",
+                    "id" : "product_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "productor",
+                    "id" : "productor",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "expanded" : true,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "user_product_detail_index",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "user_id",
+                        "id" : "user_id",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "productor",
+                        "id" : "productor",
+                        "ordinalPosition" : 3
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "product_name",
+                        "id" : "product_name",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "user_product_detail_index",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "order_info",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "order_info",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false
+              },
+              {
+                "nameProtected" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Long",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "unindexed" : true,
+                    "autoIncrement" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "unindexed" : true,
+                    "name" : "task_name",
+                    "id" : "task_name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "unindexed" : true,
+                    "name" : "task_class",
+                    "id" : "task_class",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "unindexed" : true,
+                    "name" : "task_type",
+                    "id" : "task_type",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "unindexed" : true,
+                    "name" : "task_status",
+                    "id" : "task_status",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "unindexed" : true,
+                    "name" : "remark",
+                    "id" : "remark",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "unindexed" : true,
+                    "name" : "data_param",
+                    "id" : "data_param",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "unindexed" : true,
+                    "name" : "create_time",
+                    "id" : "create_time",
+                    "ordinalPosition" : 8,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "unindexed" : true,
+                    "name" : "update_time",
+                    "id" : "update_time",
+                    "ordinalPosition" : 9,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "unindexed" : true,
+                    "name" : "version",
+                    "id" : "version",
+                    "ordinalPosition" : 10,
+                    "enabled" : true
+                  }
+                ],
+                "enabled" : false,
+                "restEnableFilters" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "unique_task_class",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "task_class",
+                        "id" : "task_class",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "unique_task_class",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "unique_task_name",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "task_name",
+                        "id" : "task_name",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "unique_task_name"
+                  }
+                ],
+                "name" : "task_timer",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "task_timer",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false
+              },
+              {
+                "nameProtected" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Long",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : false
+                  },
+                  {
+                    "databaseType" : "java.lang.Long",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "task_timer_id",
+                    "id" : "task_timer_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : false
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "param_name",
+                    "id" : "param_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : false
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "param_type",
+                    "id" : "param_type",
+                    "ordinalPosition" : 4,
+                    "enabled" : false
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "param_value",
+                    "id" : "param_value",
+                    "ordinalPosition" : 5,
+                    "enabled" : false
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "create_time",
+                    "id" : "create_time",
+                    "ordinalPosition" : 6,
+                    "enabled" : false
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "update_time",
+                    "id" : "update_time",
+                    "ordinalPosition" : 7,
+                    "enabled" : false
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "version",
+                    "id" : "version",
+                    "ordinalPosition" : 8,
+                    "enabled" : false
+                  }
+                ],
+                "enabled" : false,
+                "restEnableFilters" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_task_timer_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "task_timer_id",
+                        "id" : "task_timer_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_task_timer_id",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "task_timer_param",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "task_timer_param",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false
+              },
+              {
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "name_index",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "name",
+                        "id" : "name",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "name_index",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Long",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "name",
+                    "id" : "name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "age",
+                    "id" : "age",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "user_info",
+                "id" : "user_info",
+                "enabled" : true
+              }
+            ],
+            "expanded" : true,
+            "restEnabled" : true,
+            "name" : "test",
+            "restPath" : "",
+            "id" : "test",
+            "enabled" : true
+          }
+        ],
+        "typeName" : "MySQL",
+        "ipAddress" : "127.0.0.1",
+        "name" : "test",
+        "id" : "test",
+        "enabled" : true,
+        "username" : "root"
+      }
+    ],
+    "expanded" : true,
+    "appId" : "b2c47a8c-71e8-4bac-8125-bbdd2cb5769b",
+    "name" : "test",
+    "id" : "test",
+    "jsonpCallbackName" : "callback"
+  }
+}
